@@ -21,7 +21,7 @@ stages {
 	  steps {
 	    node ('master') {
 		  sh 'docker build -t weather-service .'
-		  sh 'docker save -o /home/ubuntu/weather-service.tar weather-servcie'  
+		  sh 'docker save -o /home/ubuntu/weather-service.tar weather-service'  
 		  }
 		}
     }		
