@@ -20,7 +20,8 @@ stages {
 	stage ('Docker_Image') {
 	  steps {
 	    node ('master') {
-		  sh 'docker build -t java_service .'
+		  sh 'docker build -t weather-service .'
+		  sh 'docker save -o /home/ubuntu/weather-service.tar weather-servcie'  
 		  }
 		}
     }		
