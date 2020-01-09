@@ -28,7 +28,7 @@ stages {
     stage ('Deploy') {
       steps {
 	    node ('master') {
-		  sh 'cd /opt; ansible-playbook deploy.yaml -vvvv'
+		  sh 'cd /opt; ansible-playbook deploy.yaml'
 		  }
 		}
     }
