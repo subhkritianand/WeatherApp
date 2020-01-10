@@ -1,0 +1,22 @@
+---
+- hosts: Docker
+  become: yes
+  become_method: sudo
+  become_user: root
+  gather_facts: yes
+
+  tasks:
+    - name: Killing existing process
+      shell: docker stop weather-service; docker rm weather-service; docker rmi $(docker images -aq)
+      ignore_errors: yes
+
+    - name: copy docker image file 
+      copy:
+        src: /opt/weather-service.tar
+        dest: /home/ubuntu
+
+    - name: untar docker image
+      shell: docker load -i weather-service.tar
+
+    - name: Running docker image as a container
+      shell: docker run -d -p 8080:8080 --name weather-service weather-service
