@@ -38,16 +38,9 @@ Some issues that need to be tackled when implementing this app
 * Improve logging
 * Add monitoring for metrics about OWM client usage
 
-## Setup
-### Source code
-Managed with git at Github: https://github.com/leobrambillaglb/forecast
-
-Branches
-* master : contains the latest "ready to ship" version of the code
-* dev : contains the latest "reviewed" code, once the code runs all integration tests should be merged into _master_
-* rc# : release candidates branches. These are "cut" from master.
- 
 ### Configurations
+
+Also, added Jenkins file as well as Ansible script for deployment to cloud providers like AWS
 
 #### Maven 3
 To make sure this project can be built with Maven 3.3, I setup the Maven Wrapper tool to use Maven 3.3.9 (latest 3.3 release)
