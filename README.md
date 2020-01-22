@@ -40,8 +40,6 @@ Some issues that need to be tackled when implementing this app
 
 ### Configurations
 
-Also, added Jenkins file as well as Ansible script for deployment to cloud providers like AWS
-
 #### Maven 3
 To make sure this project can be built with Maven 3.3, I setup the Maven Wrapper tool to use Maven 3.3.9 (latest 3.3 release)
 
@@ -87,6 +85,10 @@ The packaged jar file can be copied to another directory or simply run from ther
 ```
 >$ java -jar target/api-0.0.1-SNAPSHOT.jar
 ```
+#### Cloud deployment
+
+Also, added Jenkins file as well as Ansible script for deployment to cloud providers like AWS
+
 
 ## Links
 
@@ -96,5 +98,3 @@ The packaged jar file can be copied to another directory or simply run from ther
 * Spring Boot Caching - https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html
 * Caffeine cache - https://github.com/ben-manes/caffeine
 
-## Versions and changes
-This project follows [Keep a Changelog](https://keepachangelog.com) and [Semantic Versioning](https://semver.org)
